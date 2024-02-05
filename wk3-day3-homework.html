@@ -74,6 +74,50 @@
 
   /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
 
+  function halfNumber(num) {
+    var halfNumber = num / 2;
+    document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + halfNumber;
+  }
+
+  var halfButton = document.getElementById("half-button");
+  halfButton.addEventListener("click", function() {
+    var num = document.getElementById("half-input").value;
+    halfNumber(num);
+  });
+
+  function percentOf(num1, num2) {
+    var percent = (num1 / num2) * 100;
+    document.getElementById("solution").innerHTML = num1 + ' is ' + percent + '% of ' + num2;
+  }
+
+  var percentButton = document.getElementById("percent-button");
+  percentButton.addEventListener("click", function() {
+    var num1 = document.getElementById("percent1-input").value;
+    var num2 = document.getElementById("percent2-input").value;
+    percentOf(num1, num2);
+  });
+
+
+  function isInteger(num) {
+    var integerCheck = Number.isInteger(num);
+    document.getElementById("solution").innerHTML = 'Is ' + num + ' an integer? ' + integerCheck;
+  }
+
+  var intButton = document.getElementById("int-button");
+  intButton.addEventListener("click", function() {
+    var num = document.getElementById("int-input").value;
+    isInteger(Number(num));
+  });
+
+  function areaOfCircle(radius) {
+    var area = Math.PI * radius * radius;
+    document.getElementById("solution").innerHTML = 'The area of a circle with radius ' + radius + ' is ' + area.toFixed(2);
+  }
+  var areaButton = document.getElementById("area-button");
+  areaButton.addEventListener("click", function() {
+    var radius = document.getElementById("area-input").value;
+    areaOfCircle(radius);
+  });
 
 </script>
 </body>
